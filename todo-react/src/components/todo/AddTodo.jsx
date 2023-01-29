@@ -17,7 +17,7 @@ export const AddTodo = () => {
 		setTitle("");
 	};
 	return (
-		<HStack flexDirection={["column", "row"]}>
+		<HStack gap={"10px"} flexDirection={["column", "row"]}>
 			<Input
 				value={title}
 				onChange={(e) => {

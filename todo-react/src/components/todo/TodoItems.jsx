@@ -36,10 +36,12 @@ export const TodoItems = ({ todo }) => {
 	};
 
 	const handleUpdateTask = () => {
-		dispatch(updatingTodo(toast, edit.id, edit));
+		dispatch(updatingTodo(toast,edit.id,edit));
 	};
 
-	return (
+	return todo.length == 0 ? (
+		<h5>Empty List!! </h5>
+	) : (
 		<UnorderedList spacing={"3"}>
 			{todo.map((item) => {
 				return (
